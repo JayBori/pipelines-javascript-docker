@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jayboripipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jayboripipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jayboripipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jayboripipelinesjavascriptdocker 
+          image: sgjotest.azurecr.io/jayboripipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
